@@ -4,12 +4,12 @@ async function fetchWeatherData(cityName){
 	const data = await response.json();
 	let city = document.getElementById("city");
 	city.innerHTML = data.name;
-	let temp = document.getElementById("temp");
-	temp.innerHTML = Math.round((data.main.temp)-273.15) + "°C";
 	let windspeed = document.getElementById("wind_speed");
 	windspeed.innerHTML = data.wind.speed + "km/hr";
 	let humidity = document.getElementById("humidity");
 	humidity.innerHTML = data.main.humidity + "g/kg";
+	let temp = document.getElementById("temp");
+	temp.innerHTML = Math.round((data.main.temp)-273.15) + "°C";
 	console.log(data);
 }
 
